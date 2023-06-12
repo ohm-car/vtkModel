@@ -44,6 +44,8 @@ def main():
         sphere_source.SetThetaResolution(20)
         sphere_source.Update()
 
+        print(type(sphere_source.GetOutput()))
+
         bounds = list(sphere_source.GetOutput().GetBounds())
         for i in range(0, 6, 2):
             dist = bounds[i + 1] - bounds[i]
